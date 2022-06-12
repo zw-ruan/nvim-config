@@ -10,6 +10,14 @@ set smartcase
 
 let g:python3_host_prog = '/opt/homebrew/bin/python3'
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Text, tab and indent related
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+colorscheme tokyonight
+lua vim.g.tokyonight_style = "night"
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -15,4 +15,8 @@ return require('packer').startup(function()
   use 'hrsh7th/nvim-cmp'
   use 'SirVer/ultisnips'
   use 'quangnguyen30192/cmp-nvim-ultisnips'
+
+  use 'folke/tokyonight.nvim'
+
+  use 'Yggdroot/LeaderF'
 end)
