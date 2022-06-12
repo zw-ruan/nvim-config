@@ -69,7 +69,7 @@ map <leader>k :resize+5<cr>
 map <leader>bd :Bclose<cr>:tabclose<cr>gT
 
 " Useful mappings for managing tabs
-nnoremap <leader>tn :tabnew<cr>
+nnoremap <leader>tw :tabnew<cr>
 nnoremap <leader>to :tabonly<cr>
 nnoremap <leader>tc :tabclose<cr>
 nnoremap <leader>tm :tabmove 

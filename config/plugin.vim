@@ -85,7 +85,7 @@ lua <<EOF
         -- vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
         -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
         -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
-        -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+        vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
       end,
     },
     window = {
@@ -105,7 +105,7 @@ lua <<EOF
       { name = 'nvim_lsp' },
       -- { name = 'vsnip' }, -- For vsnip users.
       -- { name = 'luasnip' }, -- For luasnip users.
-      -- { name = 'ultisnips' }, -- For ultisnips users.
+      { name = 'ultisnips' }, -- For ultisnips users.
       -- { name = 'snippy' }, -- For snippy users.
     }, {
       { name = 'buffer' },
@@ -161,6 +161,10 @@ let g:Lf_UseCache = 0
 " Refresh each time we call leaderf
 let g:Lf_UseMemoryCache = 0
 
+let g:Lf_RgConfig = [
+        \ "--glob=!tags"
+    \ ]
+
 " Ignore certain files and directories when searching files
 let g:Lf_WildIgnore = {
   \ 'dir': ['.git', '__pycache__', '.DS_Store'],
@@ -210,7 +214,7 @@ let g:Lf_WorkingDirectoryMode = 'a'
 nnoremap <silent> <leader>ff :<C-U>Leaderf file --popup<CR>
 
 " Grep project files in popup window
-nnoremap <silent> <leader>fg :<C-U>Leaderf rg --no-messages<CR>
+nnoremap <silent> <leader>fg :<C-U>Leaderf rg --no-messages --popup<CR>
 
 " Search vim help files
 nnoremap <silent> <leader>fh :<C-U>Leaderf help --popup<CR>
@@ -231,3 +235,25 @@ let g:Lf_PopupColorscheme = 'gruvbox_material'
 " Change keybinding in LeaderF prompt mode, use ctrl-n and ctrl-p to navigate
 " items.
 let g:Lf_CommandMap = {'<C-J>': ['<C-N>'], '<C-K>': ['<C-P>']}
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" LeaderF
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Trigger configuration. Do not use <tab> if you use YouCompleteMe
+let g:UltiSnipsExpandTrigger='<c-o>'
+
+" Do not look for SnipMate snippets
+let g:UltiSnipsEnableSnipMate = 0
+
+" Shortcut to jump forward and backward in tabstop positions
+let g:UltiSnipsJumpForwardTrigger='<c-p>'
+let g:UltiSnipsJumpBackwardTrigger='<c-n>'
+
+" Configuration for custom snippets directory, see
+" https://jdhao.github.io/2019/04/17/neovim_snippet_s1/ for details.
+let g:UltiSnipsSnippetDirectories=['UltiSnips', 'my_snippets']
+
+let g:snips_author='zw.ruan.sn'
+let g:snips_email='zw.ruan.sn@gmail.com'
+let g:ultisnips_python_style='google'
