@@ -6,4 +6,13 @@ return require('packer').startup(function()
   use 'syngan/vim-gentags'
   use 'preservim/tagbar'
   use 'vim-scripts/restore_view.vim'
+
+  use 'neovim/nvim-lspconfig'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp'
+  use 'SirVer/ultisnips'
+  use 'quangnguyen30192/cmp-nvim-ultisnips'
 end)
