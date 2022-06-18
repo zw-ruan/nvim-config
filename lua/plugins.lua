@@ -2,8 +2,9 @@
 
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim' -- Package manager
+
   use 'preservim/nerdtree'
-  use 'syngan/vim-gentags'
+  use 'ludovicchabant/vim-gutentags'
   use 'preservim/tagbar'
   use 'vim-scripts/restore_view.vim'
 
