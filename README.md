@@ -1,9 +1,10 @@
-# 💤 LazyVim
+# Config
 
-> A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-> Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+> A starter template for [LazyVim](https://github.com/LazyVim/LazyVim). Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
 
-## Plugins
+[toc]
+
+## Additional Plugins
 
 ### LSP client
 - clangd: C/C++
@@ -22,5 +23,5 @@
 [nvim-cmp](https://github.com/hrsh7th/nvim-cmp/)
 
 
-## TODO
-- [distant.nvim](https://github.com/chipsenkbeil/distant.nvim)
+### TODO
+- [distant.nvim](https://github.com/chipsenkbeil/distant.nvim): working with remote machines
