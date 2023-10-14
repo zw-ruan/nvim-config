@@ -1,8 +1,10 @@
 # Config
 
-> A starter template for [LazyVim](https://github.com/LazyVim/LazyVim). Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
-
-[toc]
+```bash
+git clone https://github.com/zw-ruan/nvim-config.git ~/.config/nvim
+nvim
+# proxychains nvim
+```
 
 ## Additional Plugins
 
